@@ -87,14 +87,18 @@
         </div>
 
         <div id="ToDo" class="tabcontent">
-            <h3>To Do List</h3>
-            <input type="text" id="todoInput" placeholder="New item...">
-            <button onclick="newTodo()">Add</button>
-            <ul id="todoList"></ul>
+            <div id="myDIV" class="header">
+                <h1>My To Do List</h1>
+                <input type="text" id="myInput" placeholder="Title...">
+                <span onclick="newElement()" class="addBtn">Add</span>
+              </div>
+              
+              <ul id="myUL">
+              </ul>
         </div>
 
         <div id="Profile" class="tabcontent">
-            <h3>Profile</h3>
+            <h1>Profile</h1>
             <img src="profile.png" alt="profile" id="profileImg" onclick="showNotification()">
             <p style="margin: auto; width: fit-content;"><b>Firstname Lastname</b></p>
             <div id="profile-alert" onclick="hideNotification()" style="display: none; background-color: pink; padding: 1rem"><p>Hello! Click me to close.</p></div>
