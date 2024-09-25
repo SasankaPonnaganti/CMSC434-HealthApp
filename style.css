@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: #575757;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.scrollable-text {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+#profileImg {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    cursor: pointer;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+}
