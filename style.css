@@ -11,8 +11,6 @@ body {
     justify-content: space-around;
     position: fixed;
     bottom: 0;
-    width: 100%;  /* Ensure the navbar takes the full width of the screen */
-    z-index: 100;
 }
 
 .navbar button {
