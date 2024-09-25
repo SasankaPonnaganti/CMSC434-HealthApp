@@ -9,8 +9,8 @@ body {
     background-color: #333;
     display: flex;
     justify-content: space-around;
-    position: fixed;
     bottom: 0;
+    z-index: 100;
 }
 
 .navbar button {
