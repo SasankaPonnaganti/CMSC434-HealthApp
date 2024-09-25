@@ -17,7 +17,7 @@ document.getElementsByClassName("tablinks")[0].click();
 function displayChoices() {
     const selectedOption = document.querySelector('input[name="option"]:checked').value;
     const selectedDropdown = document.getElementById("dropdown").value;
-    document.getElementById("choiceDisplay").innerHTML = `You chose: ${selectedOption} and ${selectedDropdown}`;
+    document.getElementById("choiceDisplay").innerHTML = `You got a ${selectedOption} ${selectedDropdown}`;
 }
 
 function newTodo() {
