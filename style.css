@@ -151,15 +151,25 @@ body {
     display: table;
     clear: both;
   }
-  
   /* Style the input */
-  input {
+  .input_tab3 {
     margin: 0;
     border: none;
     border-radius: 0;
     width: 75%;
     padding: 10px;
     float: left;
+    font-size: 16px;
+  }
+  
+  /* Style the input for tab 2 */
+  .input_tab2 {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: unset;
+    padding: 10px;
+    float: unset;
     font-size: 16px;
   }
   
