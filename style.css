@@ -48,3 +48,15 @@ body {
     right: 0;
     margin: 20px;
 }
+
+#ColorHead {
+    text-align: left;
+}
+
+#Colors {
+    font-family: "Times New Roman";
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+
+}
