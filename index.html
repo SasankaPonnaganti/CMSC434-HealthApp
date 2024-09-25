@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <button class="tablinks" onclick="openTab(event, 'Text')">Text</button>
+        <button class="tablinks" onclick="openTab(event, 'Choices')">Choices</button>
+        <button class="tablinks" onclick="openTab(event, 'ToDo')">ToDo</button>
+        <button class="tablinks" onclick="openTab(event, 'Profile')">Profile</button>
+        <button class="tablinks" onclick="openTab(event, 'Colors')">Colors</button>
+        <button class="tablinks" onclick="openTab(event, 'LR')">LR</button>
+    </div>
+
+    <div id="Text" class="tabcontent">
+        <div class="scrollable-text">
+            <p>Here is some long text that you need to scroll through...</p>
+        </div>
+    </div>
+
+    <div id="Choices" class="tabcontent">
+        <h3>Choices</h3>
+        <label>
+            <input type="radio" name="option" value="Option 1"> Option 1
+        </label>
+        <label>
+            <input type="radio" name="option" value="Option 2"> Option 2
+        </label>
+        <br><br>
+        <select id="dropdown">
+            <option value="Choice 1">Choice 1</option>
+            <option value="Choice 2">Choice 2</option>
+        </select>
+        <br><br>
+        <button onclick="displayChoices()">Submit</button>
+        <p id="choiceDisplay"></p>
+    </div>
+
+    <div id="ToDo" class="tabcontent">
+        <h3>To Do List</h3>
+        <input type="text" id="todoInput" placeholder="New item...">
+        <button onclick="newTodo()">Add</button>
+        <ul id="todoList"></ul>
+    </div>
+
+    <div id="Profile" class="tabcontent">
+        <h3>Profile</h3>
+        <img src="https://via.placeholder.com/150" alt="Profile" id="profileImg" onclick="showNotification()">
+        <p><b>Your Name</b></p>
+    </div>
+
+    <div id="Colors" class="tabcontent">
+        <h3>Colors</h3>
+        <p style="color: yellow; background-color: black;">This is the first line.</p>
+        <p style="color: purple; background-color: yellow;">This is the second line.</p>
+    </div>
+
+    <div id="LR" class="tabcontent">
+        <h3>LR</h3>
+        <div class="bottom-right">Down Here</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
