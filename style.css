@@ -9,6 +9,10 @@ body {
     background-color: #333;
     display: flex;
     justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;  /* Ensure the navbar takes the full width of the screen */
+    z-index: 100;
 }
 
 .navbar button {
@@ -28,11 +32,13 @@ body {
 .tabcontent {
     display: none;
     padding: 20px;
+    height: calc(100vh - 80px); /* Adjust the height of tab content */
+    overflow-y: auto; /* Enable scrolling for tab content */
 }
 
 .scrollable-text {
-    height: 200px;
-    overflow-y: scroll;
+    height: 100%;
+    padding: 10px;
 }
 
 #profileImg {
@@ -47,4 +53,16 @@ body {
     bottom: 0;
     right: 0;
     margin: 20px;
+}
+
+#ColorHead {
+    text-align: left;
+}
+
+#Colors {
+    font-family: "Times New Roman";
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+
 }
