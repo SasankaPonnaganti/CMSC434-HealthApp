@@ -36,5 +36,9 @@ function removeItem(button) {
 }
 
 function showNotification() {
-    alert("Profile Image Clicked!");
+    document.getElementById("profile-alert").style.display = "block";
+}
+
+function hideNotification() {
+    document.getElementById("profile-alert").style.display = "none";
 }

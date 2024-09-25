@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Prototype</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
     <style>
         .device {
         margin:auto; 
@@ -37,8 +38,8 @@
             </div>
         </div>
 
-        <div id="Choices" class="tabcontent">
-            <h3>Choices</h3>
+        <div id="choices" class="tabcontent">
+            <h1>Choices</h1>
             <label>
                 <input type="radio" name="option" value="Option 1"> Option 1
             </label>
@@ -64,8 +65,9 @@
 
         <div id="Profile" class="tabcontent">
             <h3>Profile</h3>
-            <img src="https://via.placeholder.com/150" alt="Profile" id="profileImg" onclick="showNotification()">
-            <p><b>Your Name</b></p>
+            <img src="profile.png" alt="profile" id="profileImg" onclick="showNotification()">
+            <p style="margin: auto; width: fit-content;"><b>Firstname Lastname</b></p>
+            <div id="profile-alert" onclick="hideNotification()" style="display: none; background-color: pink; padding: 1rem"><p>Hello! Click me to close.</p></div>
         </div>
 
         <div id="Colors" class="tabcontent">
