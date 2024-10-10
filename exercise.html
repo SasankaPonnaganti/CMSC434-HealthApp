@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Log</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="exercise.css">
+</head>
+<body>
+
+    <!-- Page Header -->
+    <div class="header">
+        <h1>Exercise Log</h1>
+    </div>
+
+    <!-- Exercise Logging Form -->
+    <div class="container">
+        <!-- Step 2: Select Exercise -->
+        <form id="exercise-selection-form">
+            <label for="exercise-type">Select Exercise:</label>
+            <select id="exercise-type">
+                <option value="custom">Custom Exercise</option>
+                <option value="Bench Press">Bench Press</option>
+                <option value="Deadlift">Deadlift</option>
+                <option value="Lunge">Lunge</option>
+                <option value="Leg Press">Leg Press</option>
+                <option value="Squats">Squats</option>
+            </select>
+
+            <!-- Custom Exercise Input (hidden by default) -->
+            <div id="custom-exercise-fields" style="display: none;">
+                <label for="custom-exercise-name">Exercise Name:</label>
+                <input type="text" id="custom-exercise-name" placeholder="Enter exercise name">
+            </div>
+
+            <button type="submit" id="next-btn">Next</button>
+        </form>
+
+        <!-- Step 3: Input Workout Details -->
+        <form id="workout-details-form" style="display: none;">
+            <label for="sets">Number of Sets:</label>
+            <input type="number" id="sets" min="1" value="1" required>
+
+            <label for="duration">Workout Duration (minutes):</label>
+            <input type="number" id="duration" placeholder="e.g., 30">
+
+            <label for="rest-time">Rest Time Between Sets (minutes):</label>
+            <input type="number" id="rest-time" placeholder="e.g., 1">
+
+            <label for="heart-rate">Heart Rate (bpm):</label>
+            <input type="number" id="heart-rate" placeholder="e.g., 120">
+
+            <label for="calories-burned">Calories Burned:</label>
+            <input type="number" id="calories-burned" placeholder="e.g., 300">
+
+            <button type="button" id="add-exercise-btn">Add Exercise</button>
+        </form>
+
+        <!-- Current Workout Section -->
+        <h2 class="current-workout-title">Current Workout</h2>
+        <div id="current-workout" class="current-workout">
+            <ul id="exercise-list">
+                <!-- Added exercises will appear here -->
+            </ul>
+        </div>
+
+        <!-- Separation bar between Save Workout and Workout History -->
+        <div class="separator"></div>
+
+
+        <!-- Save Workout -->
+        <button type="button" id="save-workout-btn">Save Workout</button>
+
+        <!-- Workout History Section -->
+        <h2 class="history-title">Workout History</h2>
+        <ul id="workout-history"></ul>
+    </div>
+
+    <!-- Add this right above the bottom navigation or wherever you want the popup to appear -->
+    <div id="workout-complete-popup" class="workout-complete-popup" style="display: none;">
+        Congratulations on finishing a workout!
+    </div>
+
+    <!-- Bottom Navigation Tabs -->
+    <div class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <img src="icons/home.png" alt="Home">
+        </a>
+        <a href="energenie.html" class="nav-item">
+            <img src="icons/fire.png" alt="Energy">
+        </a>
+        <a href="exercise.html" class="nav-item active">
+            <img src="icons/exercise.png" alt="Exercise">
+        </a>
+        <a href="food.html" class="nav-item">
+            <img src="icons/food.png" alt="Food">
+        </a>
+    </div>
+    
+
+    <script src="exercise.js"></script>
+</body>
+</html>
