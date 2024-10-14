@@ -13,10 +13,14 @@ function renderMedicines() {
     medicines.forEach((medicine, index) => {
         const li = document.createElement('li');
         li.innerHTML = `
-            <input type="checkbox" id="med-${index}" ${medicine.taken ? 'checked' : ''}>
-            <label for="med-${index}">${medicine.name} - ${medicine.dosage}, ${medicine.frequency}</label>
-            <button onclick="editMedicine(${index})">Edit</button>
-            <button onclick="removeMedicine(${index})">Remove</button>
+            <div class="medicine-item">
+                <input type="checkbox" id="med-${index}" ${medicine.taken ? 'checked' : ''}>
+                <label for="med-${index}">${medicine.name} - ${medicine.dosage}, ${medicine.frequency}</label>
+                <div class="button-container">
+                    <button class="edit-btn" onclick="editMedicine(${index})">Edit</button>
+                    <button class="remove-btn" onclick="removeMedicine(${index})">Remove</button>
+                </div>
+            </div>
         `;
         medicineList.appendChild(li);
 
