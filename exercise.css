@@ -4,6 +4,38 @@
   box-sizing: border-box;
 }
 
+/* Lato Font */
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+/* Oswald Font */
+@font-face {
+  font-family: 'Oswald';
+  src: url('fonts/Oswald-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('fonts/Oswald-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: #FFFFFF;
