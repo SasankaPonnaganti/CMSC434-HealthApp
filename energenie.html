@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>EnerGenie</title>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="energenie.css">
@@ -34,7 +34,7 @@
                   <div class="tooltip">
                     The number of calories your body needs to perform
                     basic functions while at rest, such as breathing,
-                    circulating blood, and maintaining body temperature
+                    circulating blood, and maintaining body temperature.
                   </div>
                 </div>
                 <span id="bmr"></span>
@@ -81,14 +81,36 @@
 
             <br><br><br>
 
+            <!-- Separation bar -->
+            <div class="separator"></div>
+
             <div class="tooltip-container">
                 <span class="info-icon">i</span>
                 <h2>
                     EnerGenie is a TDEE calculator that computes the amount
-                    of calories you burn per day
+                    of calories you burn per day. Your total daily energy expenditure (TDEE)
+                    is the number of calories you burn throughout a 24-hour period.
                 </h2>
             </div>
+
+            <!-- Separation bar -->
+            <div class="separator"></div>
+
+            <div class="calorie-block">
+                <h3>Your Maintenance Calories</h3>
+                <div class="calorie-container">
+                  <div class="calorie-day">
+                    <span id="calories-per-day">--</span>
+                    <p>calories per day</p>
+                  </div>
+                  <div class="calorie-week">
+                    <span id="calories-per-week">--</span>
+                    <p>calories per week</p>
+                  </div>
+                </div>
+            </div>  
         </div> <!-- Close the container here -->
+        
         
         <!-- Bottom Navigation Tabs -->
         <div class="bottom-nav">
@@ -97,7 +119,7 @@
                 <span class="nav-title">Home</span>
             </a>
             <a href="user_info.html" class="nav-item active">
-                <img src="icons/fire.png" alt="Energenie">
+                <img src="icons/fire.png" alt="EnerGenie">
                 <span class="nav-title">Energenie</span>
             </a>
             <a href="exercise.html" class="nav-item">

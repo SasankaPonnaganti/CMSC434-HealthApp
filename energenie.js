@@ -6,7 +6,8 @@ function getQueryParams() {
         height_units: params.get('height-units'),
         weight: parseFloat(params.get('weight')),
         weight_units: params.get('weight-units'),
-        gender: params.get('gender')
+        gender: params.get('gender'),
+        activity_level: params.get('activity_level')
     };
   }
   
@@ -91,3 +92,17 @@ document.getElementById('bmr').innerText = `${bmrValue.toFixed(2)} kcal/day`;
 document.getElementById('low_activity').innerText = `${low_activity.toFixed(2)} kcal/day`;
 document.getElementById('medium_activity').innerText = `${medium_activity.toFixed(2)} kcal/day`;
 document.getElementById('high_activity').innerText = `${high_activity.toFixed(2)} kcal/day`;
+
+let selectedCalories = 0;
+// Pull the activity level and BMR from the user data
+if (data.activity_level === 'low') {
+    selectedCalories = low_activity;
+} else if (data.activity_level === 'medium') {
+    selectedCalories = medium_activity;
+} else if (data.activity_level === 'high') {
+    selectedCalories = high_activity;
+}
+
+// Update the block with calculated values for calories per day and per week
+document.getElementById('calories-per-day').innerText = `${selectedCalories.toFixed(0)}`;
+document.getElementById('calories-per-week').innerText = `${(selectedCalories * 7).toFixed(0)}`;
