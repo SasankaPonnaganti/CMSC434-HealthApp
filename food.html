@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Log</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="food.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Food Log</h1>
+    </div>
+
+    <div class="container">
+        <form id="food-selection-form">
+            <label for="food-type">Select Food:</label>
+            <select id="food-type">
+                <option value="custom">Custom Food</option>
+                <option value="Apple">Apple</option>
+                <option value="Banana">Banana</option>
+                <option value="CheezItOriginal">Cheez-It Original Crackers</option>
+                <option value="Walnuts">Walnuts</option>
+                <option value="WhiteRice">Rice</option>
+            </select>
+
+            <div id="custom-food-fields" style="display: none;">
+                <label for="custom-food-name">Food Name:</label>
+                <input type="text" id="custom-food-name" placeholder="Enter food name">
+            </div>
+
+            <button type="submit" id="next-btn">Next</button>
+        </form>
+
+        <form id="meal-details-form" style="display: none;">
+            <label for="serving-size">This Food is:</label>
+            <input type="number" id="serving-size" min="1" value="1" required>
+            <label for="unit">Calories Per:</label>
+            <select id="unit" required>
+                <option id="grams" value="grams">Gram</option>
+                <option id="cups" value="cups">Cup</option>
+                <option id="teaspoons" value="teaspoons">Teaspoon</option>
+                <option id="tablespoons" value="tablespoons">Tablespoon</option>
+                <option id="oz" value="oz">Ounce</option>
+                <option id="floz" value="floz">Fluid Ounce</option>
+                <option id="wholePieces"  value="wholePieces">Whole Piece</option>
+                <option id="package" value="package">Package</option>
+            </select>
+
+            <label for="servings">Number of Units Eaten:</label>
+            <input type="number" id="servings" placeholder="e.g., 2" required>
+
+            <label for="calories">Calories Eaten:</label>
+            <input type="number" id="calories" disabled>
+
+            <button type="button" id="add-food-btn">Add food</button>
+        </form>
+
+        <h2 class="current-meal-title">Current Meal</h2>
+        <div id="current-meal" class="current-meal">
+            <ul id="food-list">
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+
+        <button type="button" id="save-meal-btn">Save Meal</button>
+
+        <h2 class="history-title">Meal History</h2>
+        <ul id="meal-history"></ul>
+        <div style="text-align:center">
+            <h2 class="history-title"><label for="calorie-bar">Calorie Progress:</label></h2>
+            <progress id="calorie-bar" value="0" max="2000"></progress>
+        </div>
+    </div>
+
+    <div id="meal-complete-popup" class="meal-complete-popup" style="display: none;">
+        Congratulations on finishing a meal!
+    </div>
+    <br>
+
+    <div class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <img src="icons/home.png" alt="Home">
+        </a>
+        <a href="energenie.html" class="nav-item">
+            <img src="icons/fire.png" alt="Energy">
+        </a>
+        <a href="exercise.html" class="nav-item active">
+            <img src="icons/exercise.png" alt="Exercise">
+        </a>
+        <a href="food.html" class="nav-item">
+            <img src="icons/food.png" alt="Food">
+        </a>
+    </div>
+    <script src="food.js"></script>
+</body>
+</html>

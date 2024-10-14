@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 100%;
+    max-width: 640px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: #00455C;
+    font-size: 35px;
+    text-align: center;
+}
+
+h2.history-title {
+    font-family: 'Oswald', sans-serif;
+    color: #00455C;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 18px;
+    color: #00455C;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #00455C;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #003B4A;
+}
+
+.current-meal-title {
+    font-family: 'Oswald', sans-serif;
+    color: #00455C;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.current-meal {
+    font-size: 16px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.separator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#food-list {
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    overflow-y: auto;
+}
+
+#food-list li {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+ul#meal-history {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+
+ul#meal-history li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.meal-complete-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #00455C;
+    padding: 10px 0;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-item.active img {
+    filter: brightness(1.5);
+}
+
+progress {
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    background-color: #00455C;
+    border: 1px solid black;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f0f0f0;
+}
+
+progress::-webkit-progress-value {
+    background-color: #00455C;
+}
+
+progress::-moz-progress-bar {
+    background-color: #00455C;
+}
+
+progress::-ms-fill {
+    background-color: #00455C;
+}
