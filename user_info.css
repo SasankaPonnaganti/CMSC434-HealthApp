@@ -74,27 +74,39 @@
   }
   
   /* Bottom Navigation */
-  .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;  /* Ensure it's anchored to the left edge */
-    width: 100%;  /* Take full width of the viewport */
-    display: flex;
-    justify-content: space-around;
-    background-color: #00455C;
-    padding: 10px 0;
-  }
-  
-  .nav-item {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .nav-item img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .nav-item.active img {
-    filter: brightness(1.5);
-  }
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;  /* Ensure it's anchored to the left edge */
+  width: 100%;  /* Take full width of the viewport */
+  display: flex;
+  justify-content: space-around;
+  background-color: #00455C;
+  padding: 10px 0;
+}
+
+.nav-item {
+  text-decoration: none; /* Remove underline from links */
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item img {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-item .nav-title {
+  font-family: 'Lato', sans-serif; /* Ensuring Lato font is applied */
+  font-size: 12px;
+  color: #fff;
+  margin-top: 4px;
+}
+
+.nav-item.active img {
+  filter: brightness(1.5);
+}
