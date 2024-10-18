@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Info</title>
+    <link rel="stylesheet" href="exercise_search.css">
+</head>
+<body>
+
+    <!-- Page Header -->
+    <div class="header">
+        <h1>Exercise Info</h1>
+    </div>
+
+    <!-- Exercise Logging Form -->
+
+    <div class="container">
+        <a href="exercise.html">Back</a>
+        <br>
+        <!-- Step 2: Select Exercise -->
+        <form id="exercise-selection-form">
+            <label for="muscle-group">Filter By Muscle Group:</label>
+            <select id="muscle-group" onchange="filter()">
+                <option value="any">Any</option>
+                <option value="triceps">Triceps</option>
+                <option value="quad">Quadriceps</option>
+                <option value="pecs">Pectorals</option>
+                <option value="biceps">Biceps</option>
+                <option value="core">Core/Abs</option>
+                <option value="calf">Calf</option>
+                <option value="hams">Hamstring</option>
+            </select>
+        </form>
+
+        <!-- Current Workout Section -->
+        <h2 class="current-workout-title">Workouts</h2>
+            <ul id="exercise-list">
+                <li class="any core pecs biceps triceps">
+                    <h3>Bench Press</h3>
+                    <br>
+                    <p><b>Muscle Groups: </b>Triceps, Pectorals, Biceps, Core/Abs</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Lie on your back on a flat bench. Grip a barbell with hands slightly wider than shoulder width. The bar should be directly over the shoulders.</li>
+                        <li>Press your feet firmly into the ground and keep your hips on the bench throughout the entire movement.</li>
+                        <li>Keep your core engaged and maintain a neutral spine position throughout the movement. Avoid arching your back.</li>                         
+                        <li>Slowly lift the bar or dumbbells off the rack, if using. Lower the bar to the chest, about nipple level, allowing elbows to bend out to the side, about 45 degrees away from the body.</li>
+                        <li>Stop lowering when your elbows are just below the bench. Press feet into the floor as you push the bar back up to return to starting position.</li>
+                        <li>Perform 5 to 10 reps, depending on weight used. Perform up to 3 sets.</li>
+                    </ol>
+                </li>
+                <li class="any quad core calf">
+                    <h3>Deadlift</h3>
+                    <br>
+                    <p><b>Muscle Groups: </b>Quadriceps, Core/Abs, Calf</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Stand behind your loaded barbell. Place your feet about shoulder-width apart. The bar should be over your shoelaces and nearly touching your shins.</li>
+                        <li>Sit back as if you were going to sit in a chair. Keep your chest up and look forward, so your back is straight.</li>
+                        <li>Grab the barbell from this stance. Many deadlifters use an "over-under" grip with one hand grabbing overhanded and the other using an underhand hold for added strength.</li>                         
+                        <li>Push your hips forward to stand up. Press your feet into the floor for stability. Keep your core strong and your back flat while standing up.</li>
+                        <li>Keeping your back flat, send your hips back to return to your starting position with your rear out, the bar on your floor and against your legs, and your chest up and looking forward.</li>
+                        <li>Release the bar and stand up.</li>
+                    </ol>
+                </li>
+                <li class="any quad calf hams">
+                    <h3>Lunge</h3>
+                    <br>
+                    <p><b>Muscle Groups: </b>Quadriceps, Calf, Hamstrings</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Stand in a split stance with the right foot roughly 2 to 3 feet in front of the left foot. Your torso is straight, the shoulders are back and down, your core is engaged, and your hands are resting on your hips.</li>
+                        <li>Bend the knees and lower your body until the back knee is a few inches from the floor. At the bottom of the movement, the front thigh is parallel to the ground, the back knee points toward the floor, and your weight is evenly distributed between both legs.</li>
+                        <li>Push back up to the starting position, keeping your weight on the heel of the front foot.</li>                         
+                    </ol>
+                </li>
+                <li class="any quad calf hams">
+                    <h3>Leg Press</h3>
+                    <br>
+                    <p><b>Muscle Groups: </b>Quadriceps, Calf, Hamstrings</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Brace your abdominal muscles and push the platform away with your heels and forefoot. Your heels should remain flat on the footplate. The front of your foot or toes should never be used exclusively to move the pad forward.</li>
+                        <li>While exhaling, extend your legs and keep your head and back flat against the seat pad. Extend with slow control rather than with an explosive movement.</li>
+                        <li>Pause at the top of the movement. Do not lock out your knees, and ensure that they are not bowing out or in.</li> 
+                        <li>While inhaling, return the footplate to the starting position by gradually bending the knees. Keep the feet and back flat throughout.</li> 
+                        <li>If you have never done leg presses, start modestly with three sets of 10 leg presses. You can advance from there as you build strength</li>                         
+                    </ol>
+                </li>
+                <li class="any quad core calf hams">
+                    <h3>Squats</h3>
+                    <br>
+                    <p><b>Muscle Groups: </b>Quadriceps, Core/Abs, Calf, Hamstrings</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Start with feet slightly wider than hip-width apart, toes turned slightly out.</li>
+                        <li>Keeping your chest up and out and the pressure even in your feet, engage your abdominals and shift your weight back into your heels as you push your hips back.</li>
+                        <li>Lower yourself into a squat until either your heels begin to lift off the floor, or until your torso begins to round or flex forward. Your depth should be determined by your form.</li> 
+                        <li>Keep your chest out and core tight as you push through your heels to stand back up to your starting position. Squeeze your glutes at the top.</li> 
+                        <li>Perform 10–15 reps. Work up to 3 sets.</li>                         
+                    </ol>
+                </li>
+            </ul>
+
+        <!-- Separation bar between Save Workout and Workout History -->
+        <div class="separator"></div>
+    </div>
+
+    <!-- Bottom Navigation Tabs -->
+    <div class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <img src="icons/home.png" alt="Home">
+            <span class="nav-title">Home</span>
+        </a>
+        <a href="user_info.html" class="nav-item">
+            <img src="icons/fire.png" alt="EnerGenie">
+            <span class="nav-title">Energenie</span>
+        </a>
+        <a href="exercise.html" class="nav-item active">
+            <img src="icons/exercise.png" alt="Exercise">
+            <span class="nav-title">Exercise</span>
+        </a>
+        <a href="food.html" class="nav-item">
+            <img src="icons/food.png" alt="Food">
+            <span class="nav-title">Food</span>
+        </a>
+        <a href="medicine.html" class="nav-item">
+            <img src="icons/medicine.png" alt="Medicine">
+            <span class="nav-title">Medicine</span>
+        </a>
+    </div>
+    
+
+    <script src="exercise_search.js"></script>
+</body>
+</html>

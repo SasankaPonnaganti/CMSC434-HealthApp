@@ -126,6 +126,7 @@ document.getElementById('save-meal-btn').addEventListener('click', function () {
   let progress = document.getElementById("calorie-bar");
   currentFood.forEach(food => {
         progress.value = parseInt(progress.value) + parseInt(food.calories);
+        document.getElementById("total-calories").innerHTML = progress.value;
       mealDetails += `
       <li>
           <strong>${food.food || "Unknown Food"}</strong><br>
@@ -146,7 +147,6 @@ document.getElementById('save-meal-btn').addEventListener('click', function () {
 
   currentmeal = [];
   document.getElementById('food-list').innerHTML = '';
-
   document.getElementById('meal-details-form').reset();
   document.getElementById('food-selection-form').reset();
   document.getElementById('custom-food-fields').style.display = 'none';
