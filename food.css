@@ -228,10 +228,10 @@ progress {
     height: 2rem;
     width: 100%;
     margin-top: 10px;
-    margin-bottom: 3rem;
     background-color: #00455C;
     border: 1px solid black;
 }
+
 
 progress::-webkit-progress-bar {
     background-color: #f0f0f0;
