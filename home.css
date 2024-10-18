@@ -71,9 +71,9 @@ canvas {
 
 .donut-chart-label {
     position: absolute;
-    top: 45%;
-    left: 47%;
-    transform: translate(-53%, -55%);
+    top: 47%;
+    left: 46%;
+    transform: translate(-54%, -53%);
     font-size: 32px; /* Larger font size for better visibility */
     color: #00455C;
     font-weight: bold;
@@ -193,4 +193,12 @@ canvas {
   
   .nav-item.active img {
     filter: brightness(1.5);
+  }
+
+  .special-align {
+    margin-left: -2rem;
+  }
+
+  .special-align-btn {
+    margin-top: -1rem;
   }

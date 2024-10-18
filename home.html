@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Health Dashboard</title>
+    <title>HealthSphere Dashboard</title>
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <div class="container">
-        <h1>Daily Health Dashboard</h1>
-
+        <h1>HealthSphere Dashboard</h1>
+        <br>
         <div class="donut-charts">
             <div class="chart-container">
-                <h2>Steps</h2>
+                <h2 class="special-align">Steps</h2>
                 <div class="sizingcontainer">
                 <canvas id="stepsChart" width="250" height="250"></canvas>
                 <div class="donut-chart-label" id="stepsLabel"></div></div>
-                <button id="addSteps" class="add-data-btn">Add Data</button>
+                <button id="addSteps" class="special-align special-align-btn add-data-btn">Add Data</button>
             </div>
             <div class="chart-container">
-                <h2>Calories Burned</h2>
+                <h2 class="special-align">Calories Burned</h2>
                 <canvas id="caloriesBurnedChart" width="250" height="250"></canvas>
                 <div class="donut-chart-label" id="caloriesBurnedLabel"></div>
-                <button id="addCaloriesBurned" class="add-data-btn">Add Data</button>
+                <button  id="addCaloriesBurned" class="special-align special-align-btn add-data-btn">Add Data</button>
             </div>
         </div>
 
         <div id="goal-input-section" class="goal-input-section">
-            <h2>Input Your Daily Goals</h2>
-            <label for="stepsGoal">Steps Goal:</label>
+            <h2 style="font-size: 25px;">Input Your Daily Goals</h2>
+            <label for="stepsGoal" style="font-size: 18px;">Steps Goal:</label>
             <input type="number" id="stepsGoal" placeholder="e.g., 10000">
 
-            <label for="caloriesBurnedGoal">Calories Burned Goal:</label>
+            <label for="caloriesBurnedGoal" style="font-size: 18px;">Calories Burned Goal:</label>
             <input type="number" id="caloriesBurnedGoal" placeholder="e.g., 2000">
 
             <button id="confirmGoals" class="add-data-btn">Confirm Entry</button>
