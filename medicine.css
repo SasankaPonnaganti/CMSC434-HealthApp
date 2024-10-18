@@ -41,7 +41,7 @@ h1 {
 
 /* Form and inputs styling */
 h2 {
-  font-size: 18px;
+  font-size: 25px;
   color: #00455C;
   margin-bottom: 10px;
   display: block;
@@ -97,13 +97,13 @@ button:hover {
 }
 
 .nav-item img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav-item .nav-title {
   font-family: 'Lato', sans-serif; /* Ensuring Lato font is applied */
-  font-size: 12px;
+  font-size: 13px;
   color: #fff;
   margin-top: 4px;
 }
@@ -116,7 +116,7 @@ button:hover {
 .medicine-item {
   display: flex;
   align-items: center;
-  margin-bottom: -20px;
+  margin-bottom: 10px;
 }
 
 .medicine-name, .medicine-info {
@@ -153,5 +153,43 @@ margin: 0; /* Removes any default margin */
 }
 
 label {
-margin-left: 10px;
+  font-size: 20px;
+  color: #00455C;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.dosage-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.frequency-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#add-time-btn {
+  width: 50%;
+  margin-top: -2px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+#medicine-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.time-frequency-container {
+  display: flex;
+  gap: 5px;
 }

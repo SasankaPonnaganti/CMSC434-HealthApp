@@ -3,9 +3,26 @@ const medicineNameInput = document.getElementById('medicine-name');
 const dosageInput = document.getElementById('dosage');
 const frequencyInput = document.getElementById('frequency');
 const medicineList = document.getElementById('medicine-list');
+const timeList = document.getElementById('time-list');
+const dosageUnitSelect = document.getElementById('dosage-units');
+const medicineType = document.getElementById('medicine-type');
 
 // Medicine list array
 let medicines = [];
+
+function attachAddTimeListener() {
+    const addTimeBtn = document.getElementById('add-time-btn');
+    addTimeBtn.replaceWith(addTimeBtn.cloneNode(true));
+
+    document.getElementById('add-time-btn').addEventListener('click', () => {
+        const timeInput = document.createElement('input');
+        timeInput.type = 'time';
+        timeInput.classList.add('time-input');
+        timeList.appendChild(timeInput);
+    });
+}
+
+attachAddTimeListener();
 
 // Function to render medicine list
 function renderMedicines() {
@@ -15,7 +32,19 @@ function renderMedicines() {
         li.innerHTML = `
             <div class="medicine-item">
                 <input type="checkbox" id="med-${index}" ${medicine.taken ? 'checked' : ''}>
-                <label for="med-${index}">${medicine.name} - ${medicine.dosage}, ${medicine.frequency}</label>
+                <div class="medicine-info">
+                    <label for="med-${index}" style="font-size: 15px;">
+                        <strong>${medicine.name}</strong>: ${medicine.dosage} ${medicine.dosageUnit}, ${medicine.type}
+                    </label>
+                    <div class="time-frequency-container">
+                        <label for="med-${index}" style="font-size: 15px;">
+                            Every ${medicine.frequency} day(s) at
+                        </label>
+                        <label for="med-${index}" style="font-size: 15px;">
+                            ${medicine.times.length > 0 ? medicine.times.join(', ') : 'no specific time'}
+                        </label>
+                    </div>
+                </div>
                 <div class="button-container">
                     <button class="edit-btn" onclick="editMedicine(${index})">Edit</button>
                     <button class="remove-btn" onclick="removeMedicine(${index})">Remove</button>
@@ -36,10 +65,16 @@ function renderMedicines() {
 medicineForm.addEventListener('submit', (e) => {
     e.preventDefault(); // Prevent form submission
 
+    // Collect all the times entered
+    const times = Array.from(document.querySelectorAll('.time-input')).map(input => input.value);
+
     const medicine = {
         name: medicineNameInput.value,
+        type: medicineType.value,
         dosage: dosageInput.value,
+        dosageUnit: dosageUnitSelect.value,
         frequency: frequencyInput.value,
+        times,
         taken: false // Default taken status
     };
 
@@ -48,8 +83,13 @@ medicineForm.addEventListener('submit', (e) => {
 
     // Clear form inputs
     medicineNameInput.value = '';
+    medicineType.value = '';
     dosageInput.value = '';
     frequencyInput.value = '';
+    timeList.innerHTML = '';
+
+    // Reattach the "Add Time" button event listener after form reset
+    attachAddTimeListener();
 });
 
 // Function to remove medicine
@@ -63,6 +103,7 @@ function editMedicine(index) {
     const medicine = medicines[index];
     medicineNameInput.value = medicine.name;
     dosageInput.value = medicine.dosage;
+    dosageUnitSelect.value = medicine.dosageUnit;
     frequencyInput.value = medicine.frequency;
 
     // Remove medicine after editing
