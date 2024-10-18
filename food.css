@@ -209,13 +209,13 @@ ul#meal-history li {
   }
   
   .nav-item img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
   
   .nav-item .nav-title {
     font-family: 'Lato', sans-serif; /* Ensuring Lato font is applied */
-    font-size: 12px;
+    font-size: 13px;
     color: #fff;
     margin-top: 4px;
   }
