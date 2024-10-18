@@ -104,7 +104,7 @@ document.getElementById('save-workout-btn').addEventListener('click', function (
   // Hide the pop-up after 2 seconds
   setTimeout(() => {
       workoutCompletePopup.style.display = 'none';
-  }, 2000);
+  }, 3500);
 
   // Clear the current workout and the exercise list
   currentWorkout = [];
@@ -114,7 +114,80 @@ document.getElementById('save-workout-btn').addEventListener('click', function (
   document.getElementById('workout-details-form').reset();  // Reset form
   document.getElementById('exercise-selection-form').reset();  // Reset the select dropdown
   document.getElementById('custom-exercise-fields').style.display = 'none'; // Hide custom fields
+
+  // Check if "custom" is selected and show the custom exercise fields if necessary
+  const exerciseType = document.getElementById('exercise-type').value;
+  if (exerciseType === 'custom') {
+      document.getElementById('custom-exercise-fields').style.display = 'block';
+  } else {
+      document.getElementById('custom-exercise-fields').style.display = 'none';
+  }
+
   // Hide workout details and return to select exercise
   document.getElementById('workout-details-form').style.display = 'none';
   document.getElementById('exercise-selection-form').style.display = 'block';
 });
+
+// Variables to hold the current week and workout dates
+let currentWeekStart = new Date('2024-01-02'); // Starting point: January 1st
+const workoutDates = []; // No pre-colored dates on start
+
+// Function to format the date for display
+function formatDate(date) {
+    const options = { month: 'short', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+}
+
+// Function to generate the timeline markers
+function generateTimeline(startDate) {
+    const timeline = document.querySelector('.timeline');
+    const dateElements = document.querySelector('.dates');
+    timeline.innerHTML = '';
+    dateElements.innerHTML = '';
+
+    for (let i = 0; i < 7; i++) {
+        const markerDate = new Date(startDate);
+        markerDate.setDate(markerDate.getDate() + i);
+        const formattedDate = formatDate(markerDate);
+
+        const marker = document.createElement('div');
+        marker.classList.add('marker');
+        marker.setAttribute('data-date', formattedDate);
+        marker.addEventListener('click', () => markWorkout(marker));
+        
+        // No pre-coloring, only highlight when user clicks
+        if (workoutDates.includes(formattedDate)) {
+            marker.classList.add('active');
+        }
+
+        const dateElement = document.createElement('div');
+        dateElement.innerText = formattedDate;
+
+        timeline.appendChild(marker);
+        dateElements.appendChild(dateElement);
+    }
+}
+
+// Function to mark a workout on a specific date
+function markWorkout(marker) {
+    const selectedDate = marker.getAttribute('data-date');
+    if (!workoutDates.includes(selectedDate)) {
+        workoutDates.push(selectedDate); // Add to the logged dates
+        marker.classList.add('active'); // Highlight marker
+    }
+}
+
+// Navigate to the previous week
+document.getElementById('prev-week').addEventListener('click', () => {
+    currentWeekStart.setDate(currentWeekStart.getDate() - 7);
+    generateTimeline(currentWeekStart);
+});
+
+// Navigate to the next week
+document.getElementById('next-week').addEventListener('click', () => {
+    currentWeekStart.setDate(currentWeekStart.getDate() + 7);
+    generateTimeline(currentWeekStart);
+});
+
+// Initialize the timeline for the current week starting from January 1st
+generateTimeline(currentWeekStart);

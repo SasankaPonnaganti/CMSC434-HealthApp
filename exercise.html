@@ -33,7 +33,12 @@
                 <input type="text" id="custom-exercise-name" placeholder="Enter exercise name">
             </div>
 
-            <button type="submit" id="next-btn">Next</button>
+            <!-- Add this inside the exercise-selection-form where the Next button currently exists -->
+            <div class="button-row">
+                <button type="submit" class="next-btn" id="next-btn">Next</button>
+                <button type="button" class="go-to-other-page-btn" onclick="window.location.href='exercise_search.html'">Workout Information</button>
+            </div>
+
         </form>
 
         <!-- Step 3: Input Workout Details -->
@@ -64,16 +69,28 @@
             </ul>
         </div>
 
-        <!-- Separation bar between Save Workout and Workout History -->
-        <div class="separator"></div>
-
-
         <!-- Save Workout -->
         <button type="button" id="save-workout-btn">Save Workout</button>
 
+        <div class="separator"></div>
+
+        <div class="time-container">
+            <h3>Workout Timeline</h3>
+            <div class="timeline-container">
+                <div class="timeline"></div>
+                <div class="dates"></div>
+                <div class="week-nav-container">
+                    <button id="prev-week" class="week-nav">Previous Week</button>
+                    <button id="next-week" class="week-nav">Next Week</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Workout History Section -->
         <h2 class="history-title">Workout History</h2>
+        <div class="workouthistoryseparator"></div>
         <ul id="workout-history"></ul>
+        
     </div>
 
     <!-- Add this right above the bottom navigation or wherever you want the popup to appear -->
