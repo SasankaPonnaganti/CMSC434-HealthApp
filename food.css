@@ -4,6 +4,38 @@
     box-sizing: border-box;
 }
 
+/* Lato Font */
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+  
+  /* Oswald Font */
+  @font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: #FFFFFF;
@@ -98,11 +130,12 @@ button:hover {
     border: 1px solid #ccc;
 }
 
+/* Thin horizontal line between sections */
 .separator {
     margin-top: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-}
+    border-bottom: 1px solid #ccc; /* Thin separation line */
+  }
 
 #food-list {
     margin-top: 10px;
@@ -176,13 +209,13 @@ ul#meal-history li {
   }
   
   .nav-item img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
   
   .nav-item .nav-title {
     font-family: 'Lato', sans-serif; /* Ensuring Lato font is applied */
-    font-size: 12px;
+    font-size: 13px;
     color: #fff;
     margin-top: 4px;
   }
@@ -194,10 +227,11 @@ ul#meal-history li {
 progress {
     height: 2rem;
     width: 100%;
-    margin-bottom: 3rem;
+    margin-top: 10px;
     background-color: #00455C;
     border: 1px solid black;
 }
+
 
 progress::-webkit-progress-bar {
     background-color: #f0f0f0;
