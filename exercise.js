@@ -40,6 +40,7 @@ document.getElementById('add-exercise-btn').addEventListener('click', function (
   }
 
   const sets = document.getElementById('sets').value;
+  const weight = document.getElementById('weight').value;
   const duration = document.getElementById('duration').value;
   const restTime = document.getElementById('rest-time').value;
   const heartRate = document.getElementById('heart-rate').value;
@@ -49,6 +50,7 @@ document.getElementById('add-exercise-btn').addEventListener('click', function (
   currentWorkout.push({
       exercise: exercise,
       sets: sets,
+      weight: weight,
       duration: duration,
       restTime: restTime,
       heartRate: heartRate,
@@ -60,7 +62,7 @@ document.getElementById('add-exercise-btn').addEventListener('click', function (
   exerciseList.innerHTML += `
       <li>
           <strong>Exercise: ${exercise}</strong><br>
-          Sets: ${sets}, Duration: ${duration || "N/A"} mins, Rest Time: ${restTime || "N/A"} mins<br>
+          Sets: ${sets}, Weight: ${weight || "N/A"} lbs, Duration: ${duration || "N/A"} mins, Rest Time: ${restTime || "N/A"} mins<br>
           Heart Rate: ${heartRate || "N/A"} bpm, Calories: ${calories || "N/A"} kcal
       </li>
   `;
@@ -89,7 +91,7 @@ document.getElementById('save-workout-btn').addEventListener('click', function (
       workoutDetails += `
           <li>
               Exercise: ${exercise.exercise}<br>
-              Sets: ${exercise.sets}, Duration: ${exercise.duration || "N/A"} mins, Rest Time: ${exercise.restTime || "N/A"} mins<br>
+              Sets: ${exercise.sets}, Weight: ${exercise.weight || "N/A"} lbs, Duration: ${exercise.duration || "N/A"} mins, Rest Time: ${exercise.restTime || "N/A"} mins<br>
               Heart Rate: ${exercise.heartRate || "N/A"} bpm, Calories: ${exercise.calories || "N/A"} kcal
           </li>
       `;
