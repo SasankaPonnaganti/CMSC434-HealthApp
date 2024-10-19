@@ -10,6 +10,15 @@ const medicineType = document.getElementById('medicine-type');
 // Medicine list array
 let medicines = [];
 
+// Function to convert 24-hour time to 12-hour time format
+function convertTo12Hour(time) {
+    const [hours, minutes] = time.split(':');
+    let hour = parseInt(hours);
+    const ampm = hour >= 12 ? 'PM' : 'AM';
+    hour = hour % 12 || 12; // Convert '0' hour to '12'
+    return `${hour}:${minutes} ${ampm}`;
+}
+
 function attachAddTimeListener() {
     const addTimeBtn = document.getElementById('add-time-btn');
     addTimeBtn.replaceWith(addTimeBtn.cloneNode(true));
@@ -41,7 +50,8 @@ function renderMedicines() {
                             Every ${medicine.frequency} day(s) at
                         </label>
                         <label for="med-${index}" style="font-size: 15px;">
-                            ${medicine.times.length > 0 ? medicine.times.join(', ') : 'no specific time'}
+                            ${medicine.times.length > 0 ? medicine.times.map(convertTo12Hour).join(', ') : 'no specific time'}
+
                         </label>
                     </div>
                 </div>
@@ -102,6 +112,7 @@ function removeMedicine(index) {
 function editMedicine(index) {
     const medicine = medicines[index];
     medicineNameInput.value = medicine.name;
+    medicineType.value = medicine.type;
     dosageInput.value = medicine.dosage;
     dosageUnitSelect.value = medicine.dosageUnit;
     frequencyInput.value = medicine.frequency;

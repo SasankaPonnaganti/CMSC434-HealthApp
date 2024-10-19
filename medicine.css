@@ -144,44 +144,84 @@ button:hover {
   filter: brightness(1.5);
 }
 
-
+/* Medicine Item Styling */
 .medicine-item {
   display: flex;
   align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
   margin-bottom: 10px;
 }
 
-.medicine-name, .medicine-info {
-  margin-right: 10px;
+.medicine-item .checkbox-container {
+  flex-basis: 5%;
 }
 
-.edit-btn, .remove-btn {
-  font-size: 12px;
-  padding: 5px 10px;
-  margin-left: 5px;
+/* Increase checkbox size */
+.medicine-item input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+
+.medicine-item .medicine-text-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  text-align: left; /* Left align the text */
+}
+
+.medicine-item .button-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.medicine-info label {
+  font-size: 18px; /* Increase the font size here */
+  font-weight: bold;
+  color: #00455C;
+}
+
+/* Buttons for Edit and Remove */
+button.edit-btn, button.remove-btn {
+  font-size: 17px;
+  padding: 10px 15px;
   cursor: pointer;
-  width: 70px;
+  background-color: #00455C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
 }
 
-.edit-btn:hover, .remove-btn:hover {
-background-color: #003B4A;
+button.edit-btn:hover, button.remove-btn:hover {
+  background-color: #003B4A;
 }
 
-.button-container {
-display: flex;
-margin-left: auto;
+/* Medicine List Container */
+#medicine-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-bottom: 100px;
+  box-sizing: border-box;
 }
 
+/* Miscellaneous */
 .separator {
-margin-top: 20px;
-margin-bottom: 20px;
-border-bottom: 1px solid #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
 }
 
 ul {
-list-style-type: none; /* Removes the bullet points */
-padding: 0; /* Removes any default padding */
-margin: 0; /* Removes any default margin */
+  list-style-type: none; /* Removes the bullet points */
+  padding: 0; /* Removes any default padding */
+  margin: 0; /* Removes any default margin */
 }
 
 label {
@@ -195,13 +235,13 @@ input[type="checkbox"] {
   margin-right: 5px;
 }
 
-.dosage-container{
+.dosage-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.frequency-container{
+.frequency-container {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -214,11 +254,15 @@ input[type="checkbox"] {
   margin-bottom: 20px;
 }
 
-#medicine-list {
-  max-height: 400px;
-  overflow-y: auto;
-  padding-bottom: 100px;
-  box-sizing: border-box;
+.time-input {
+  padding: 4px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+  width: 110px; /* Adjust the width to fit the time and AM/PM properly */
+  min-width: 110px; /* Ensure the input has enough space for both time and AM/PM */
+  box-sizing: border-box; /* Include padding in the total width */
 }
 
 .time-frequency-container {
