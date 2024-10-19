@@ -63,49 +63,35 @@ h1 {
 }
 
 canvas {
-    margin-bottom: 10px;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     display: block;
 }
 
 .donut-chart-label {
     position: absolute;
-    top: 47%;
-    left: 46%;
-    transform: translate(-54%, -53%);
-    font-size: 32px; /* Larger font size for better visibility */
-    color: #00455C;
-    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    font-size: 20px;
+    color: #00455C;
+    font-weight: bold;
     pointer-events: none;
 }
 
-/* Button styles */
-.add-data-btn {
-    display: inline-block;
-    padding: 10px;
-    background-color: #00455C;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    width: 130px; /* Adjust button size */
-    font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
+.donut-chart-label .numerator {
+    font-size: 32px; /* Larger font size for the current value */
 }
 
-.add-data-btn:hover {
-    background-color: #003B4A;
+.donut-chart-label .denominator {
+    font-size: 16px; /* Smaller font size for the goal */
 }
 
+/* Input section styling */
 .goal-input-section {
     margin-top: 20px;
     padding: 20px;
@@ -123,38 +109,45 @@ canvas {
     text-align: center;
 }
 
-.goal-input-section label {
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
     display: block;
-    margin-bottom: 5px;
     font-size: 14px;
     color: #00455C;
+    margin-bottom: 5px;
 }
 
-.goal-input-section input[type="number"] {
+.input-group input[type="number"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    box-sizing: border-box;
 }
 
-.goal-input-section button {
-    display: block;
-    width: 100%;
+/* Button styles */
+.add-data-btn {
+    display: inline-block;
     padding: 10px;
     background-color: #00455C;
     color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
-.goal-input-section button:hover {
+.add-data-btn:hover {
     background-color: #003B4A;
 }
-
 
 
 /* Bottom Navigation */
