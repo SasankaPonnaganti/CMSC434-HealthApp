@@ -153,7 +153,7 @@ document.getElementById('save-meal-btn').addEventListener('click', function () {
 
   setTimeout(() => {
       mealCompletePopup.style.display = 'none';
-  }, 2000);
+  }, 3000);
 
   currentmeal = [];
   document.getElementById('food-list').innerHTML = '';
