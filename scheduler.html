@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stopwatch</title>
-    <link rel="stylesheet" href="stopwatch.css">
+    <title>Activity Scheduler</title>
+    <link rel="stylesheet" href="scheduler.css">
 </head>
 <body>
-    <!-- Page Header -->
+
     <div class="header">
-        <h1>Stopwatch</h1>
+        <h1>Scheduler</h1>
     </div>
 
-    <!-- Stopwatch Container -->
     <div class="container">
-        <div id="stopwatch-display" class="stopwatch-display">00:00:00.00</div>
+        <h2>Add Activity</h2>
+        <form id="activity-form">
+            <input type="text" id="activity-name" placeholder="Activity Name (e.g., Work, Run, Yoga)" required>
+            <p class="reminder-note">You will receive a reminder when the start time passes.</p>
+            <label for="start-time">Start Time:</label>
+            <input type="time" id="start-time" required>
+            <label for="end-time">End Time:</label>
+            <input type="time" id="end-time" required>
+            <button type="submit">Add Activity</button>
+        </form>
 
-        <!-- Stopwatch Controls -->
-        <div class="button-row">
-            <button id="start-btn" class="stopwatch-btn">Start</button>
-            <button id="lap-btn" class="stopwatch-btn">Lap</button>
-            <button id="stop-btn" class="stopwatch-btn">Stop</button>
-            <button id="reset-btn" class="stopwatch-btn">Reset</button>
-        </div>
+        <div class="separator"></div>
 
-        <!-- Lap Times Section -->
-        <div class="lap-container">
-            <h2>Laps</h2>
-            <div class="separator"></div>
-            <ul id="lap-list" class="lap-list"></ul>
-        </div>
+        <h2>Your Scheduled Activities</h2>
+        <ul id="activity-list"></ul>
     </div>
 
     <!-- Bottom Navigation Tabs -->
@@ -40,9 +38,9 @@
         </a>
         <a href="user_info.html" class="nav-item">
             <img src="icons/fire.png" alt="EnerGenie">
-            <span class="nav-title">EnerGenie</span>
+            <span class="nav-title">Energenie</span>
         </a>
-        <a href="exercise.html" class="nav-item active">
+        <a href="exercise.html" class="nav-item">
             <img src="icons/exercise.png" alt="Exercise">
             <span class="nav-title">Exercise</span>
         </a>
@@ -54,12 +52,12 @@
             <img src="icons/medicine.png" alt="Medicine">
             <span class="nav-title">Medicine</span>
         </a>
-        <a href="scheduler.html" class="nav-item">
+        <a href="scheduler.html" class="nav-item active">
             <img src="icons/medicine.png" alt="Scheduler">
             <span class="nav-title">Scheduler</span>
         </a>
     </div>
 
-    <script src="stopwatch.js"></script>
+    <script src="scheduler.js"></script>
 </body>
 </html>
