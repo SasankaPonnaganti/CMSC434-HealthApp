@@ -31,6 +31,7 @@ document.getElementById('food-type').addEventListener('change', function () {
         customfoodFields.style.display = 'none';
     }
 });
+let done = false;
 
 window.addEventListener('DOMContentLoaded', function () {
     const customfoodFields = document.getElementById('custom-food-fields');
@@ -139,6 +140,15 @@ document.getElementById('save-meal-btn').addEventListener('click', function () {
   mealHistory.innerHTML += mealDetails;
 
   const mealCompletePopup = document.getElementById('meal-complete-popup');
+  if (parseInt(progress.value) >= 1500 && parseInt(progress.value) < 2000) {
+    console.log("Hi");
+    mealCompletePopup.innerHTML = "Congratulations on finishing a meal! You are close to your calorie goal for the day, keep it up!";
+  } else if (parseInt(progress.value) >= 2000 && done == false) {
+    done = true;
+    mealCompletePopup.innerHTML = "Congratulations on finishing a meal and meeting your calorie goal for the day!";
+  } else {
+    mealCompletePopup.innerHTML = "Congratulations on finishing a meal!";
+  }
   mealCompletePopup.style.display = 'block';
 
   setTimeout(() => {
