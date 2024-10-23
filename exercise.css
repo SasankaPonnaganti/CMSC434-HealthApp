@@ -364,3 +364,13 @@ ul#workout-history li {
 #prev-week, #next-week {
   width: 120px;
 }
+
+#keyboard-img {
+  position: fixed;
+  bottom: 0px;  
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 640px;  
+  z-index: 1000;
+}

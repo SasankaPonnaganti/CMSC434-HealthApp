@@ -193,3 +193,24 @@ document.getElementById('next-week').addEventListener('click', () => {
 
 // Initialize the timeline for the current week starting from January 1st
 generateTimeline(currentWeekStart);
+
+//Keyboard functionality
+const customExerciseNameInput = document.getElementById('custom-exercise-name-text-entry');
+const keyboardImg = document.getElementById('keyboard-img');
+
+if (customExerciseNameInput && keyboardImg) {
+    customExerciseNameInput.addEventListener('focus', function () {
+        keyboardImg.style.display = 'block';
+    });
+
+    document.addEventListener('click', function (event) {
+        const isClickInsideInput = customExerciseNameInput.contains(event.target);
+        const isClickInsideKeyboard = keyboardImg.contains(event.target);
+
+        if (!isClickInsideInput && !isClickInsideKeyboard) {
+            keyboardImg.style.display = 'none';
+        }
+    });
+} else {
+    console.error("Element(s) not found: custom-exercise-name or keyboard-image.");
+}

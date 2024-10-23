@@ -164,3 +164,24 @@ document.getElementById('save-meal-btn').addEventListener('click', function () {
   document.getElementById('food-selection-form').style.display = 'block';
   currentFood = [];
 });
+
+// Keyboard functionality
+const customFoodNameInput = document.getElementById('custom-food-name-text-entry');
+const keyboardImg = document.getElementById('keyboard-img');
+
+if (customFoodNameInput && keyboardImg) {
+    customFoodNameInput.addEventListener('focus', function () {
+        keyboardImg.style.display = 'block';
+    });
+
+    document.addEventListener('click', function (event) {
+        const isClickInsideInput = customFoodNameInput.contains(event.target);
+        const isClickInsideKeyboard = keyboardImg.contains(event.target);
+
+        if (!isClickInsideInput && !isClickInsideKeyboard) {
+            keyboardImg.style.display = 'none';
+        }
+    });
+} else {
+    console.error("Element(s) not found: custom-food-name or keyboard-image.");
+}

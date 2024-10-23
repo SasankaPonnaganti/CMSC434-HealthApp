@@ -132,3 +132,24 @@ function formatTimeWithPeriod(time, period) {
 
 // Check for reminders every every minute
 setInterval(checkReminders, 60000);
+
+//Keyboard functionality
+const customActivityNameInput = document.getElementById('activity-name');
+const keyboardImg = document.getElementById('keyboard-img');
+
+if (customActivityNameInput && keyboardImg) {
+    customActivityNameInput.addEventListener('focus', function () {
+        keyboardImg.style.display = 'block';
+    });
+
+    document.addEventListener('click', function (event) {
+        const isClickInsideInput = customActivityNameInput.contains(event.target);
+        const isClickInsideKeyboard = keyboardImg.contains(event.target);
+
+        if (!isClickInsideInput && !isClickInsideKeyboard) {
+            keyboardImg.style.display = 'none';
+        }
+    });
+} else {
+    console.error("Element(s) not found: activity-name or keyboard-image.");
+}

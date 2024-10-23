@@ -249,3 +249,13 @@ progress::-moz-progress-bar {
 progress::-ms-fill {
     background-color: #00455C;
 }
+
+#keyboard-img {
+    position: fixed;
+    bottom: 0px;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 640px;  
+    z-index: 1000;
+}

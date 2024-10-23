@@ -193,3 +193,13 @@ ul {
 .nav-item.active img {
     filter: brightness(1.5);
 }
+
+#keyboard-img {
+    position: fixed;
+    bottom: 0px;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 640px;  
+    z-index: 1000;
+}
