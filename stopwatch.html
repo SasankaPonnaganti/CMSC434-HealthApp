@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+    <!-- Page Header -->
+    <div class="header">
+        <h1>Stopwatch</h1>
+    </div>
+
+    <!-- Stopwatch Container -->
+    <div class="container">
+        <div id="stopwatch-display" class="stopwatch-display">00:00:00.00</div>
+
+        <!-- Stopwatch Controls -->
+        <div class="button-row">
+            <button id="start-btn" class="stopwatch-btn">Start</button>
+            <button id="lap-btn" class="stopwatch-btn">Lap</button>
+            <button id="stop-btn" class="stopwatch-btn">Stop</button>
+            <button id="reset-btn" class="stopwatch-btn">Reset</button>
+        </div>
+
+        <!-- Lap Times Section -->
+        <div class="lap-container">
+            <h2>Laps</h2>
+            <div class="separator"></div>
+            <ul id="lap-list" class="lap-list"></ul>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Tabs -->
+    <div class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <img src="icons/home.png" alt="Home">
+            <span class="nav-title">Home</span>
+        </a>
+        <a href="user_info.html" class="nav-item">
+            <img src="icons/fire.png" alt="EnerGenie">
+            <span class="nav-title">Energenie</span>
+        </a>
+        <a href="exercise.html" class="nav-item active">
+            <img src="icons/exercise.png" alt="Exercise">
+            <span class="nav-title">Exercise</span>
+        </a>
+        <a href="food.html" class="nav-item">
+            <img src="icons/food.png" alt="Food">
+            <span class="nav-title">Food</span>
+        </a>
+        <a href="medicine.html" class="nav-item">
+            <img src="icons/medicine.png" alt="Medicine">
+            <span class="nav-title">Medicine</span>
+        </a>
+    </div>
+
+    <script src="stopwatch.js"></script>
+</body>
+</html>

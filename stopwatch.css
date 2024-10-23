@@ -1,0 +1,177 @@
+/* Reusing basic styles from the main app */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  /* Lato Font */
+  @font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+  
+  /* Oswald Font */
+  @font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 100%;
+    max-width: 640px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+  
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: #00455C;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #00455C;
+    margin-bottom: 10px; 
+}
+  
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top: 125px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+}
+  
+.stopwatch-display {
+    font-size: 72px; 
+    color: #00455C;
+    margin-bottom: 20px;
+}
+  
+.button-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px; 
+}
+  
+.stopwatch-btn {
+    flex: 1;
+    padding: 15px;
+    background-color: #00455C;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+  
+.stopwatch-btn:hover {
+    background-color: #003B4A;
+}
+  
+.lap-container {
+    width: 100%;
+    margin-top: 20px;
+    overflow-y: auto; 
+    max-height: calc(100vh - 525px); 
+}
+  
+.lap-list {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.lap-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+/* Thin horizontal line between sections */
+.separator {
+    margin-top: 1px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc; /* Thin separation line */
+  }
+  
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #00455C;
+    padding: 10px 0;
+}
+  
+.nav-item {
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.nav-item img {
+    width: 40px;
+    height: 40px;
+}
+  
+.nav-item .nav-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    margin-top: 4px;
+}
+  
+.nav-item.active img {
+    filter: brightness(1.5);
+}

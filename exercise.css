@@ -125,7 +125,7 @@ button {
 
 /* Style for the Next button - takes 30% of the width */
 .next-btn {
-  flex: 0.3;  /* Takes 30% of the space */
+  flex: 0.33;  /* Takes 30% of the space */
   padding: 10px;
   background-color: #00455C;
   color: #FFFFFF;
@@ -134,11 +134,12 @@ button {
   font-size: 18px;
   cursor: pointer;
   margin-top: 0;
+  margin-left: 5px;  /* Add some space between the two buttons */
 }
 
 /* Style for the Go to Other Page button - takes the rest of the width */
 .go-to-other-page-btn {
-  flex: 0.7;  /* Takes 70% of the space */
+  flex: 0.6;  /* Takes 70% of the space */
   padding: 10px;
   background-color: #00455C; /* You can change the color as needed */
   color: #FFFFFF;
@@ -149,8 +150,6 @@ button {
   margin-left: 10px;  /* Add some space between the two buttons */
   margin-top: 0;
 }
-
-
 
 button:hover {
   background-color: #003B4A;
