@@ -106,3 +106,15 @@ if (data.activity_level === 'low') {
 // Update the block with calculated values for calories per day and per week
 document.getElementById('calories-per-day').innerText = `${selectedCalories.toFixed(0)}`;
 document.getElementById('calories-per-week').innerText = `${(selectedCalories * 7).toFixed(0)}`;
+
+const maxCalorieValue = Math.max(low_activity, medium_activity, high_activity);
+
+// Set bar widths based on calorie values, scaling relative to the max value
+document.getElementById('low-bar-value').style.width = `${(low_activity / maxCalorieValue) * 100}%`;
+document.getElementById('low-bar-value').innerText = `${low_activity.toFixed(0)} kcal`;
+
+document.getElementById('medium-bar-value').style.width = `${(medium_activity / maxCalorieValue) * 100}%`;
+document.getElementById('medium-bar-value').innerText = `${medium_activity.toFixed(0)} kcal`;
+
+document.getElementById('high-bar-value').style.width = `${(high_activity / maxCalorieValue) * 100}%`;
+document.getElementById('high-bar-value').innerText = `${high_activity.toFixed(0)} kcal`;
