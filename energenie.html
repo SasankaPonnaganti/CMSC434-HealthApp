@@ -20,6 +20,14 @@
                   <span class="info-icon">i</span>:
                   <div class="tooltip">
                     A calculation that estimates body fat based on a person's weight and height.
+                    <br>
+                    Underweight. Less than 18.5.
+                    <br>
+                    Healthy Weight. 18.5 to less than 25.
+                    <br>
+                    Overweight. 25 to less than 30.
+                    <br>
+                    Obese. 30 or greater.
                   </div>
                 </div>
                 <span id="bmi"></span>
@@ -80,16 +88,23 @@
 
             <br><br><br>
 
-            <!-- Separation bar -->
+            <!-- Separation bar -->        
             <div class="separator"></div>
 
-            <div class="tooltip-container">
-                <span class="info-icon">i</span>
-                <h2>
-                    EnerGenie is a TDEE calculator that computes the amount
-                    of calories you burn per day. Your total daily energy expenditure (TDEE)
-                    is the number of calories you burn throughout a 24-hour period.
-                </h2>
+            <div class="activity-chart">
+              <h3>Calorie Requirements by Activity Level</h3>
+              <div class="bar" id="low-bar">
+                <div class="bar-label">Low</div>
+                <div class="bar-value" id="low-bar-value"></div>
+              </div>
+              <div class="bar" id="medium-bar">
+                <div class="bar-label">Medium</div>
+                <div class="bar-value" id="medium-bar-value"></div>
+              </div>
+              <div class="bar" id="high-bar">
+                <div class="bar-label">High</div>
+                <div class="bar-value" id="high-bar-value"></div>
+              </div>
             </div>
 
             <!-- Separation bar -->
@@ -107,7 +122,19 @@
                     <p>calories per week</p>
                   </div>
                 </div>
-            </div>  
+            </div>
+
+            <!-- Separation bar -->
+            <div class="separator"></div>
+
+            <div class="tooltip-container">
+              <span class="info-icon">i</span>
+              <h2>
+                  EnerGenie is a TDEE calculator that computes the amount
+                  of calories you burn per day. Your total daily energy expenditure (TDEE)
+                  is the number of calories you burn throughout a 24-hour period.
+              </h2>
+          </div>
         </div> <!-- Close the container here -->
         
         

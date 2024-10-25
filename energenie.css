@@ -70,6 +70,8 @@
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 80px); /* Adjust for bottom nav */
+    overflow-y: auto;
+    padding-bottom: 100px;
   }
   
   /* Form and inputs styling */
@@ -234,5 +236,40 @@
   .calorie-day p, .calorie-week p {
     font-size: 14px;
     color: #000;
+  }
+
+  .activity-chart {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  .bar {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    height: 30px;
+    position: relative;
+  }
+  
+  .bar-label {
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #333;
+    z-index: 1;
+  }
+  
+  .bar-value {
+    height: 100%;
+    background-color: #3498db;
+    text-align: right;
+    color: #fff;
+    padding-right: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
   
