@@ -46,6 +46,7 @@ document.getElementById('food-selection-form').addEventListener('submit', functi
     e.preventDefault();
     document.getElementById('food-selection-form').style.display = 'none';
     const foodType = document.getElementById('food-type').value;
+    document.getElementById('calories').setAttribute("value", document.getElementById('serving-size').value * document.getElementById('servings').value)
 
     if (foodType in presets) {
         document.getElementById('serving-size').setAttribute("disabled", true);
@@ -78,7 +79,7 @@ document.getElementById('food-selection-form').addEventListener('submit', functi
 
 document.getElementById('add-food-btn').addEventListener('click', function () {
   const foodType = document.getElementById('food-type').value;
-  const customfoodName = document.getElementById('custom-food-name').value;
+  const customfoodName = document.getElementById('custom-food-name-text-entry').value;
 
   let food = foodType;
 
@@ -109,7 +110,7 @@ document.getElementById('add-food-btn').addEventListener('click', function () {
   `;
 
   document.getElementById('meal-details-form').reset();
-  document.getElementById('custom-food-name').value = ''; 
+  document.getElementById('custom-food-name-text-entry').value = ''; 
 
   document.getElementById('meal-details-form').style.display = 'none';
   document.getElementById('food-selection-form').style.display = 'block';
