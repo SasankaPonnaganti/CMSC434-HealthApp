@@ -86,6 +86,7 @@ const bmrValue = calculateBMR(data.weight, data.weight_units, data.height, data.
 const low_activity = calculateCaloriesBurned(bmrValue, 'low');
 const medium_activity = calculateCaloriesBurned(bmrValue, 'medium');
 const high_activity = calculateCaloriesBurned(bmrValue, 'high');
+const maxCalorieValue = Math.max(low_activity, medium_activity, high_activity);
 
 document.getElementById('bmi').innerText = `${bmiValue.toFixed(2)}`;
 document.getElementById('bmr').innerText = `${bmrValue.toFixed(2)} kcal/day`;
@@ -106,8 +107,6 @@ if (data.activity_level === 'low') {
 // Update the block with calculated values for calories per day and per week
 document.getElementById('calories-per-day').innerText = `${selectedCalories.toFixed(0)}`;
 document.getElementById('calories-per-week').innerText = `${(selectedCalories * 7).toFixed(0)}`;
-
-const maxCalorieValue = Math.max(low_activity, medium_activity, high_activity);
 
 // Set bar widths based on calorie values, scaling relative to the max value
 document.getElementById('low-bar-value').style.width = `${(low_activity / maxCalorieValue) * 100}%`;
