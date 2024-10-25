@@ -22,7 +22,7 @@
         <form id="exercise-selection-form">
             <label for="muscle-group">Filter By Muscle Group:</label>
             <select id="muscle-group" onchange="filter()">
-                <option value="any">Any</option>
+                <option value="any-m">Any</option>
                 <option value="triceps">Triceps</option>
                 <option value="quad">Quadriceps</option>
                 <option value="pecs">Pectorals</option>
@@ -31,13 +31,21 @@
                 <option value="calf">Calf</option>
                 <option value="hams">Hamstring</option>
             </select>
+            <label for="equipment">Filter by Equipment Required</label>
+            <select id="equipment" onchange="filter()">
+                <option value="any-e">Any</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
         </form>
 
         <!-- Current Workout Section -->
         <h2 class="current-workout-title">Workouts</h2>
             <ul id="exercise-list">
-                <li class="any core pecs biceps triceps">
+                <li class="any-m any-e yes core pecs biceps triceps">
                     <h3>Bench Press</h3>
+                    <br>
+                    <p><b>Equipment Required</b></p>
                     <br>
                     <p><b>Muscle Groups: </b>Triceps, Pectorals, Biceps, Core/Abs</p>
                     <br>
@@ -51,8 +59,10 @@
                         <li>Perform 5 to 10 reps, depending on weight used. Perform up to 3 sets.</li>
                     </ol>
                 </li>
-                <li class="any quad core calf">
+                <li class="any-m any-e yes quad core calf">
                     <h3>Deadlift</h3>
+                    <br>
+                    <p><b>Equipment Required</b></p>
                     <br>
                     <p><b>Muscle Groups: </b>Quadriceps, Core/Abs, Calf</p>
                     <br>
@@ -66,8 +76,10 @@
                         <li>Release the bar and stand up.</li>
                     </ol>
                 </li>
-                <li class="any quad calf hams">
+                <li class="any-m any-e no quad calf hams">
                     <h3>Lunge</h3>
+                    <br>
+                    <p><b>Equipment Not Required</b></p>
                     <br>
                     <p><b>Muscle Groups: </b>Quadriceps, Calf, Hamstrings</p>
                     <br>
@@ -78,8 +90,10 @@
                         <li>Push back up to the starting position, keeping your weight on the heel of the front foot.</li>                         
                     </ol>
                 </li>
-                <li class="any quad calf hams">
+                <li class="any-m any-e yes quad calf hams">
                     <h3>Leg Press</h3>
+                    <br>
+                    <p><b>Equipment Required</b></p>
                     <br>
                     <p><b>Muscle Groups: </b>Quadriceps, Calf, Hamstrings</p>
                     <br>
@@ -92,8 +106,10 @@
                         <li>If you have never done leg presses, start modestly with three sets of 10 leg presses. You can advance from there as you build strength</li>                         
                     </ol>
                 </li>
-                <li class="any quad core calf hams">
+                <li class="any-m any-e no quad core calf hams">
                     <h3>Squats</h3>
+                    <br>
+                    <p><b>Equipment Not Required</b></p>
                     <br>
                     <p><b>Muscle Groups: </b>Quadriceps, Core/Abs, Calf, Hamstrings</p>
                     <br>
@@ -106,7 +122,85 @@
                         <li>Perform 10–15 reps. Work up to 3 sets.</li>                         
                     </ol>
                 </li>
+                <li class="any-m any-e yes core triceps">
+                    <h3>Seated Triceps Press</h3>
+                    <br>
+                    <p><b>Equipment Required</b></p>
+                    <br>
+                    <p><b>Muscle Groups: </b>Triceps, Core/Abs</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Sit on a bench with back support.</li>
+                        <li>Grip a dumbbell at one end using both hands. Your palms should be facing inward.</li>                         
+                        <li>Hold the dumbbell overhead with your arms fully extended. This is the the start position.</li>
+                        <li>Keep your upper arms close to your head (biceps roughly level with your temples) and near to 90 degrees to the floor.</li>
+                        <li>Moving only your forearms, lower the dumbbell in a smooth arc behind your head until your forearms and biceps touch. Hold for a count of one.</li>
+                        <li>Return to the start position by using the triceps to extend your arm and raise the dumbbell. Exhale as you do this.</li>
+                    </ol>
+                </li>
+                <li class="any-m any-e no triceps pecs">
+                    <h3>Bodyweight Dips</h3>
+                    <br>
+                    <p><b>Equipment Not Required</b></p>
+                    <br>
+                    <p><b>Muscle Groups: </b>Triceps, Pectorals</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Sit on the ground with your knees bent and feet flat on the floor. Place your arms behind you on the floor with your fingers facing forward.</li>
+                        <li>Lift your hips off the ground, just a few inches. All of your weight should be in your hands and feet.</li>
+                        <li>Lower your body down to the ground by bending your elbows.</li>                         
+                        <li>Press down with your hands to straighten your arms and raise your hips and body back up.</li>
+                        <li>Repeat as many times as desired or as prescribed by your exercise program.</li>
+                    </ol>
+                </li>
+                <li class="any-m any-e no core">
+                    <h3>Side Plank</h3>
+                    <br>
+                    <p><b>Equipment Not Required</b></p>
+                    <br>
+                    <p><b>Muscle Groups: </b>Core/Abs</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Lie on your side with your legs straight and your feet stacked on top of each other. (It helps to do this on a yoga mat or another soft surface.)</li>
+                        <li>Place your forearm flat on the ground, under your shoulder.</li>
+                        <li>Push through your feet and forearm to lift your hips up toward the ceiling. Avoid rotating your hips.</li>
+                        <li>Hold this position for a few seconds, thinking about squeezing your core muscles as you do so. Try to gaze forward to help keep your neck in a neutral position.</li>
+                        <li>Lower yourself back to the floor and repeat a few times before switching to the other side.</li>                 
+                    </ol>
+                </li>
+                <li class="any-m any-e no quad core hams">
+                    <h3>Bridge</h3>
+                    <br>
+                    <p><b>Equipment Not Required</b></p>
+                    <br>
+                    <p><b>Muscle Groups: </b>Quadriceps, Core/Abs, Hamstrings</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Lie comfortably on your back. You might want to do this on a yoga mat or another soft surface.</li>
+                        <li>With your knees bent and your feet flat on the floor, push through your feet to raise your hips off the floor.</li>
+                        <li>Squeeze your butt muscles at the top of the move.</li> 
+                        <li>Relax your hips back to the floor.</li>                        
+                    </ol>
+                </li>
+                <li class="any-m any-e yes biceps">
+                    <h3>Standing Biceps Curls</h3>
+                    <br>
+                    <p><b>Equipment Required</b></p>
+                    <br>
+                    <p><b>Muscle Groups: </b>Biceps</p>
+                    <br>
+                    <p style="margin-bottom: 10px"><b>Steps:</b></p>
+                    <ol>
+                        <li>Begin in a standing upright position, holding a dumbbell in each hand, with your palms facing forward.</li>
+                        <li>Slowly curl both dumbbells up toward your shoulders, then lower them back down and repeat. Make sure to keep your palms facing forward, back straight, and do not shrug your shoulder during the exercise.</li>                  
+                    </ol>
+                </li>
             </ul>
+            <p id="nothing-found" style="display:none">No exercises found</p>
 
         <!-- Separation bar between Save Workout and Workout History -->
         <div class="separator"></div>
@@ -133,10 +227,6 @@
         <a href="medicine.html" class="nav-item">
             <img src="icons/medicine.png" alt="Medicine">
             <span class="nav-title">Medicine</span>
-        </a>
-        <a href="scheduler.html" class="nav-item">
-            <img src="icons/scheduler.png" alt="Scheduler">
-            <span class="nav-title">Scheduler</span>
         </a>
     </div>
     
