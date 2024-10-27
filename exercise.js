@@ -30,7 +30,7 @@ document.getElementById('exercise-selection-form').addEventListener('submit', fu
 // Add exercise to the current workout
 document.getElementById('add-exercise-btn').addEventListener('click', function () {
   const exerciseType = document.getElementById('exercise-type').value;
-  const customExerciseName = document.getElementById('custom-exercise-name').value;
+  const customExerciseName = document.getElementById('custom-exercise-name-text-entry').value;
 
   let exercise = exerciseType; // Default to dropdown selection
 
@@ -69,7 +69,7 @@ document.getElementById('add-exercise-btn').addEventListener('click', function (
 
   // Reset the form inputs for the next exercise
   document.getElementById('workout-details-form').reset();
-  document.getElementById('custom-exercise-name').value = ''; 
+  document.getElementById('custom-exercise-name-text-entry').value = ''; 
 
   // Hide workout details and return to select exercise
   document.getElementById('workout-details-form').style.display = 'none';
