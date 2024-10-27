@@ -57,6 +57,12 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #00455C;
+  font-size: 25px;
+}
+
 /* Remove the fixed heights to allow full page scrolling */
 .container {
   width: 100%;
